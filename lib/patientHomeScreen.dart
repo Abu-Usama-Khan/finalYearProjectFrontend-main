@@ -388,10 +388,10 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
               GestureDetector(
                 onTap: () => getJokes(),
                 child: Container(
-                  color: Colors.green,
+                  color: Colors.black,
                   width: 200,
                   height: 50,
-                  child: Center(child: Text('Instant stress Buster'))),
+                  child: Center(child: Text('Instant stress Buster Joke', style: TextStyle(color: Colors.white),))),
               ),
 
               Padding(

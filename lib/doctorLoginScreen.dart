@@ -48,7 +48,7 @@ class _doctorLoginScreenState extends State<doctorLoginScreen> {
         print(id);
         print(token);
         showSuccessResponse("Login  Successfully");
-        if (data["isVerified"]) {
+        if (data["data"]["isVerified"].toString() == 'true') {
           Timer(Duration(seconds: 2), () {
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => doctorHomeScreen()));

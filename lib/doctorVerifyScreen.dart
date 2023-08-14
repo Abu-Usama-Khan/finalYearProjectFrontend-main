@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:my_app/Globalvar.dart';
+import 'package:my_app/doctorWaitingScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -17,7 +18,8 @@ class doctorVerifyScreen extends StatefulWidget {
 
 class _doctorVerifyScreenState extends State<doctorVerifyScreen> {
 
-  File? image ;
+  File? image;
+  var filePath;
   final _picker = ImagePicker();
   bool showSpinner = false ;
 
@@ -26,6 +28,7 @@ class _doctorVerifyScreenState extends State<doctorVerifyScreen> {
 
     if(pickedFile!= null ){
       image = File(pickedFile.path);
+      filePath = pickedFile.path;
       setState(() {
 
       });
@@ -40,41 +43,6 @@ class _doctorVerifyScreenState extends State<doctorVerifyScreen> {
       showSpinner = true ;
     });
 
-    /***var stream  = new ByteStream(image!.openRead());
-    stream.cast();
-
-    var length = await image!.length();
-    var uri = Uri.parse(liveUrl + 'api/uploadDegree?doctorId=' + id);    
-    var request = new MultipartRequest('POST', uri);
-
-    request.fields['doctorEmail'] = widget.DocEmail;
-
-    request.headers['x-access-token'] = token;
-
-    var multiport = new MultipartFile(
-        'degreeImg',
-        stream,
-        length);
-
-    request.files.add(multiport);
-
-    var response = await request.send() ;
-
-    print(response.stream.toString());
-    print(widget.DocEmail);
-
-      if(response.statusCode == 200){
-        setState(() {
-          showSpinner = false ;
-        });
-        print('image uploaded');
-      }else {
-        print(response.statusCode);
-        setState(() {
-          showSpinner = false ;
-        });
-      }***/
-
     var headers = {
       'x-access-token': token
     };
@@ -82,16 +50,28 @@ class _doctorVerifyScreenState extends State<doctorVerifyScreen> {
     request.fields.addAll({
       'doctorEmail': widget.DocEmail
     });
-    request.files.add(await http.MultipartFile.fromPath('degreeImg', '/F:/Usama/BSSE/BSSE 4/7th sem/TOCI (Deep Learning)/Abu Usama Khan - Intro to Deep Learning.png'));
+    request.files.add(await http.MultipartFile.fromPath('degreeImg', filePath));
     request.headers.addAll(headers);
 
     http.StreamedResponse response = await request.send();
 
     if (response.statusCode == 200) {
-      print(await response.stream.bytesToString());
+      setState(() {
+          showSpinner = false ;
+        });
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => doctorWaitingScreen(),
+          ),
+        );
+        print('image uploaded');
     }
     else {
       print(response.reasonPhrase);
+      setState(() {
+          showSpinner = false ;
+        });
     }
   }
 

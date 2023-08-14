@@ -31,8 +31,7 @@ class _doctorCreateScheduleScreenState
           
     void doctor_schedule(v1,v2,v3,v4) async{
       try{
-        var baseUrl = 'https://finalyearprojectbackend-production.up.railway.app/';
-        Response response = await post(Uri.parse(baseUrl + 'api/doctorScheduleCreate?doctorId=$id'),
+        Response response = await post(Uri.parse(liveUrl + 'api/doctorScheduleCreate?doctorId=$id'),
           body: {
             'day' : v1,
             'from' : v2,
