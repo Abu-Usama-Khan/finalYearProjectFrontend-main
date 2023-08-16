@@ -78,7 +78,8 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
 
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          title: const Text("Signup"),
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Center(
             child: SingleChildScrollView(
@@ -95,13 +96,13 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       prefixIcon:
-                          const Icon(Icons.person, color: Colors.black)),
+                          const Icon(Icons.person, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -114,13 +115,13 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       prefixIcon:
-                          const Icon(Icons.person, color: Colors.black)),
+                          const Icon(Icons.person, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -133,12 +134,12 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
-                      prefixIcon: const Icon(Icons.email, color: Colors.black)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
+                      prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -152,12 +153,12 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
-                      prefixIcon: const Icon(Icons.key, color: Colors.black)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
+                      prefixIcon: const Icon(Icons.key, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -170,12 +171,12 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
-                      prefixIcon: const Icon(Icons.phone, color: Colors.black)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
+                      prefixIcon: const Icon(Icons.phone, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -195,7 +196,7 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                       padding: EdgeInsets.symmetric(vertical: 1),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: Colors.black, width: 4)),
+                          border: Border.all(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                     ),
                     iconStyleData: const IconStyleData(
                       iconSize: 30.0,
@@ -203,15 +204,15 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                     hint: _selectedCategory == ""
                         ? const Text(
                             'Select Your Field',
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Color.fromARGB(255, 7, 135, 240)),
                           )
                         : Text(
                             _selectedCategory,
                             style: const TextStyle(
-                                color: Colors.black, fontSize: 16),
+                                color: Color.fromARGB(255, 7, 135, 240), fontSize: 16),
                           ),
                     isExpanded: true,
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Color.fromARGB(255, 7, 135, 240)),
                     items: categoriesList.map(
                       (val) {
                         return DropdownMenuItem<String>(
@@ -237,7 +238,7 @@ class _doctorSignupScreenState extends State<doctorSignupScreen> {
                 margin: const EdgeInsets.only(bottom: 20),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                               Radius.circular(20))) //<-- SEE HERE

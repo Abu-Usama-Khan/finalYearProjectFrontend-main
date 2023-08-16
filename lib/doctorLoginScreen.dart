@@ -74,7 +74,8 @@ class _doctorLoginScreenState extends State<doctorLoginScreen> {
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          title: const Text("Login"),
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Center(
             child: SingleChildScrollView(
@@ -91,12 +92,12 @@ class _doctorLoginScreenState extends State<doctorLoginScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
-                      prefixIcon: const Icon(Icons.email, color: Colors.black)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
+                      prefixIcon: const Icon(Icons.email, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -110,12 +111,12 @@ class _doctorLoginScreenState extends State<doctorLoginScreen> {
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              const BorderSide(color: Colors.black, width: 4)),
-                      prefixIcon: const Icon(Icons.key, color: Colors.black)),
+                              const BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
+                      prefixIcon: const Icon(Icons.key, color: Color.fromARGB(255, 7, 135, 240))),
                 ),
               ),
               Container(
@@ -124,7 +125,7 @@ class _doctorLoginScreenState extends State<doctorLoginScreen> {
                 margin: const EdgeInsets.only(bottom: 20),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                               Radius.circular(20))) //<-- SEE HERE

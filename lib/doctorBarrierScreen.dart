@@ -12,7 +12,8 @@ var doctorEmail;
     var _mediaQuery= MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        title: const Text("Hidden Therapy"),
+        backgroundColor: Color.fromARGB(255, 7, 135, 240),
       ),
       body: Center(
         child: Column(
@@ -37,7 +38,7 @@ var doctorEmail;
                 child: Text("Let's Go",textAlign: TextAlign.center,style: TextStyle(fontSize: _mediaQuery.size.width * 0.035,),),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 30.0),
-                  primary: Colors.black,
+                  primary: Color.fromARGB(255, 7, 135, 240),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),

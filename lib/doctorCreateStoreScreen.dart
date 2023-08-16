@@ -55,7 +55,7 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Center(
             child: SingleChildScrollView(
@@ -81,15 +81,15 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
+                                  BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
+                                  BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 2)),
+                                  BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                           prefixIcon: Icon(
                             Icons.store_mall_directory_rounded,
                             color: Colors.grey,
@@ -106,15 +106,15 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             prefixIcon: Icon(
                               Icons.add_location,
                               color: Colors.grey,
@@ -130,15 +130,15 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             prefixIcon: Icon(
                               Icons.add_location,
                               color: Colors.grey,
@@ -154,15 +154,15 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide:
-                                    BorderSide(color: Colors.black, width: 2)),
+                                    BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                             prefixIcon: Icon(
                               Icons.add_location,
                               color: Colors.grey,
@@ -186,7 +186,7 @@ class _doctorCreateStoreState extends State<doctorCreateStore> {
                             style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 30.0, vertical: 20.0),
-                              backgroundColor: Colors.black,
+                              backgroundColor: Color.fromARGB(255, 7, 135, 240),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),

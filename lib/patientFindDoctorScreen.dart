@@ -47,7 +47,7 @@ class _PatientFindDoctorState extends State<PatientFindDoctor> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
           title: const Text('Find Your Doctor'),
           actions: [
             IconButton(
@@ -59,7 +59,7 @@ class _PatientFindDoctorState extends State<PatientFindDoctor> {
               icon: const Icon(Icons.search)
             )
           ],
-          bottom: const TabBar(
+          bottom: const TabBar(indicatorColor: Colors.white,
             tabs: [
               Tab(text: 'All'),
               Tab(text: 'Psychiatrists'),

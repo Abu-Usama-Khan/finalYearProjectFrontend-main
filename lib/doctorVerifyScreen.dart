@@ -81,6 +81,7 @@ class _doctorVerifyScreenState extends State<doctorVerifyScreen> {
       inAsyncCall: showSpinner,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
           title: Text('Upload Image'),
         ),
         body: Column(

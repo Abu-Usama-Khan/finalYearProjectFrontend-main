@@ -26,21 +26,17 @@ class _splashPageState extends State<splashScreen> {
         body: Container(
           width: _mediaQuery.size.width * 1,
           height:  _mediaQuery.size.height * 1,
-            color: Colors.black,
-            child: Container(
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Text(
-                  "Hidden Therapy",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: _mediaQuery.size.width * 0.09,),
-                ),
-              ]),
-            )));
+          decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/cover.jpg'),fit: BoxFit.cover)),
+          child: Center(
+            child: Text(
+                    "Hidden Therapy",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: _mediaQuery.size.width * 0.09,),
+                  ),
+          )
+            ));
   }
 }
