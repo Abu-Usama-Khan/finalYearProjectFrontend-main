@@ -7,7 +7,7 @@ class doctorWaitingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
       body: const Center(
         child: SizedBox(

@@ -30,97 +30,19 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Hidden Therapy"),
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Center(
             child: SingleChildScrollView(
               child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-              Container(
-                  width: _mediaQuery.size.width * 0.8,
-                  margin: const EdgeInsets.only(bottom: 8, top: 10),
-                  child: Text(
-                    "Choose Your Doctor",
-                    style: TextStyle(
-                        fontSize: _mediaQuery.size.width * 0.04,
-                        fontWeight: FontWeight.bold),
-                  )),
-              Container(
-                height: _mediaQuery.size.height * 0.2,
-                width: _mediaQuery.size.width * 0.8,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    final item = items[index] as Map;
-                    return InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PatientDoctorDetailScreen(''),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        height: _mediaQuery.size.height * 0.2,
-                        width: _mediaQuery.size.width * 0.65,
-                        margin: const EdgeInsets.only(bottom: 20, right: 15),
-                        color: Colors.grey,
-                        child: Row(
-                          children: [
-                            Container(
-                              width: _mediaQuery.size.width * 0.3,
-                              child: Center(
-                                child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        item['first_name'] + item['last_name'],
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          color: Colors.white,
-                                          fontSize: _mediaQuery.size.width * 0.04,
-                                        ),
-                                      ),
-                                      Text(
-                                        item['field'],
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          color: Colors.white,
-                                          fontSize: _mediaQuery.size.width * 0.04,
-                                        ),
-                                      ),
-                                    ]),
-                              ),
-                            ),
-                            Container(
-                              width: _mediaQuery.size.width * 0.35,
-                              child: Image.network(
-                                "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                                height: _mediaQuery.size.height * 0.2,
-                                width: _mediaQuery.size.width * 0.35,
-                                fit: BoxFit.cover,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
               Container(
                 width: _mediaQuery.size.width * 0.8,
                 height: 40,
                 margin: const EdgeInsets.only(bottom: 10),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                               Radius.circular(20))) //<-- SEE HERE
@@ -129,7 +51,7 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
                     'Find Doctor',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: _mediaQuery.size.width * 0.04,
+                        fontSize: _mediaQuery.size.width * 0.06,
                         color: Colors.white),
                   ),
                   onPressed: () {
@@ -143,226 +65,12 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
                 ),
               ),
               Container(
-                  width: _mediaQuery.size.width * 0.8,
-                  margin: const EdgeInsets.only(bottom: 20, top: 20),
-                  child: Text(
-                    "Choose Your Medical Store",
-                    style: TextStyle(
-                        fontSize: _mediaQuery.size.width * 0.04,
-                        fontWeight: FontWeight.bold),
-                  )),
-              Container(
-                  width: _mediaQuery.size.width * 0.8,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
-                          height: _mediaQuery.size.height * 0.2,
-                          width: _mediaQuery.size.width * 0.65,
-                          margin: const EdgeInsets.only(bottom: 20, right: 15),
-                          color: Colors.grey,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: _mediaQuery.size.width * 0.3,
-                                child: Center(
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Ali Medical",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                        Text(
-                                          "North Karachi",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ),
-                              Container(
-                                width: _mediaQuery.size.width * 0.35,
-                                child: Image.network(
-                                  "https://images.unsplash.com/photo-1576602976047-174e57a47881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhhcm1hY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                                  height: _mediaQuery.size.height * 0.2,
-                                  width: _mediaQuery.size.width * 0.35,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: _mediaQuery.size.height * 0.2,
-                          width: _mediaQuery.size.width * 0.65,
-                          margin: const EdgeInsets.only(bottom: 20, right: 15),
-                          color: Colors.grey,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: _mediaQuery.size.width * 0.3,
-                                child: Center(
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Tabba Medical",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                        Text(
-                                          "North Karachi",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ),
-                              Container(
-                                width: _mediaQuery.size.width * 0.35,
-                                child: Image.network(
-                                  "https://images.unsplash.com/photo-1576602976047-174e57a47881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhhcm1hY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                                  height: _mediaQuery.size.height * 0.2,
-                                  width: _mediaQuery.size.width * 0.35,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: _mediaQuery.size.height * 0.2,
-                          width: _mediaQuery.size.width * 0.65,
-                          margin: const EdgeInsets.only(bottom: 20, right: 15),
-                          color: Colors.grey,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: _mediaQuery.size.width * 0.3,
-                                child: Center(
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Ali Medical",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                        Text(
-                                          "North Karachi",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ),
-                              Container(
-                                width: _mediaQuery.size.width * 0.35,
-                                child: Image.network(
-                                  "https://images.unsplash.com/photo-1576602976047-174e57a47881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhhcm1hY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                                  height: _mediaQuery.size.height * 0.2,
-                                  width: _mediaQuery.size.width * 0.35,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: _mediaQuery.size.height * 0.2,
-                          width: _mediaQuery.size.width * 0.65,
-                          margin: const EdgeInsets.only(bottom: 20, right: 15),
-                          color: Colors.grey,
-                          child: Row(
-                            children: [
-                              Container(
-                                width: _mediaQuery.size.width * 0.3,
-                                child: Center(
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Makkah Medical",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                        Text(
-                                          "North Karachi",
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            color: Colors.white,
-                                            fontSize:
-                                                _mediaQuery.size.width * 0.04,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ),
-                              Container(
-                                width: _mediaQuery.size.width * 0.35,
-                                child: Image.network(
-                                  "https://images.unsplash.com/photo-1576602976047-174e57a47881?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhhcm1hY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                                  height: _mediaQuery.size.height * 0.2,
-                                  width: _mediaQuery.size.width * 0.35,
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  )),
-              Container(
                 width: _mediaQuery.size.width * 0.8,
                 height: 40,
                 margin: const EdgeInsets.only(bottom: 20),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                               Radius.circular(20))) //<-- SEE HERE
@@ -371,7 +79,7 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
                     'Find Store',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: _mediaQuery.size.width * 0.04,
+                        fontSize: _mediaQuery.size.width * 0.06,
                         color: Colors.white),
                   ),
                   onPressed: () {
@@ -387,17 +95,20 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
 
               GestureDetector(
                 onTap: () => getJokes(),
-                child: Container(
-                  color: Colors.black,
-                  width: 200,
-                  height: 50,
-                  child: Center(child: Text('Instant stress Buster Joke', style: TextStyle(color: Colors.white),))),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 50),
+                  child: Container(
+                    color: Color.fromARGB(255, 7, 135, 240),
+                    width: 200,
+                    height: 50,
+                    child: Center(child: Text('Instant stress Buster Joke', style: TextStyle(color: Colors.white),))),
+                ),
               ),
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  color: const Color.fromARGB(255, 223, 221, 221),
+                  color: Color.fromARGB(255, 140, 201, 252),
                   height: 100,
                   width: 700,
                   child: Padding(

@@ -78,7 +78,7 @@ class _PatientFindStoreState extends State<PatientFindStore> {
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 7, 135, 240),
       ),
       body: Column(
         children: [

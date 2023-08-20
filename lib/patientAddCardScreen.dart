@@ -70,9 +70,10 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
   Widget build(BuildContext context) {
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
+      resizeToAvoidBottomInset : false,
         appBar: AppBar(
           title: const Text("Hidden Therapy"),
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Center(
           child: Container(
@@ -96,13 +97,13 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
                     hintText: "Credit Card Number",
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.black, width: 2)),
+                        borderSide: BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.black, width: 2)),
+                        borderSide: BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.black, width: 2)),
+                        borderSide: BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                     prefixIcon: Icon(
                       Icons.credit_card,
                       color: Colors.grey,
@@ -119,15 +120,15 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       prefixIcon: Icon(
                         Icons.calendar_view_day,
                         color: Colors.grey,
@@ -143,15 +144,15 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       prefixIcon: Icon(
                         Icons.calendar_view_month,
                         color: Colors.grey,
@@ -167,15 +168,15 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 2)),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide:
-                              BorderSide(color: Colors.black, width: 2)),
+                              BorderSide(color: Color.fromARGB(255, 7, 135, 240), width: 4)),
                       prefixIcon: Icon(
                         Icons.credit_card_sharp,
                         color: Colors.grey,
@@ -189,7 +190,7 @@ class _patientAddCardScreenState extends State<patientAddCardScreen> {
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(
                             horizontal: 80.0, vertical: 20.0),
-                        backgroundColor: Colors.black,
+                        backgroundColor: Color.fromARGB(255, 7, 135, 240),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),

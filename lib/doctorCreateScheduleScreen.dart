@@ -86,7 +86,7 @@ class _doctorCreateScheduleScreenState
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color.fromARGB(255, 7, 135, 240),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -262,7 +262,7 @@ class _doctorCreateScheduleScreenState
                   style: ElevatedButton.styleFrom(
                     padding:
                         EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-                    backgroundColor: Colors.black,
+                    backgroundColor: Color.fromARGB(255, 7, 135, 240),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),

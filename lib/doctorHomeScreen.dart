@@ -9,7 +9,8 @@ class doctorHomeScreen extends StatelessWidget {
     var _mediaQuery= MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        title: const Text("Hidden Therapy"),
+        backgroundColor: Color.fromARGB(255, 7, 135, 240),
       ),
       body: SafeArea(
             child: Column(
@@ -28,7 +29,7 @@ class doctorHomeScreen extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 100,
-                color: Colors.grey,
+                color: Color.fromARGB(255, 7, 135, 240),
                 margin: EdgeInsets.fromLTRB(20, 5, 20, 10),
               
                 child: Center(
@@ -56,7 +57,7 @@ class doctorHomeScreen extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 100,
-                color: Colors.grey,
+                color: Color.fromARGB(255, 7, 135, 240),
                 margin: EdgeInsets.fromLTRB(20, 5, 20, 10),
               
                 child: Center(
@@ -84,7 +85,7 @@ class doctorHomeScreen extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: 100,
-                color: Colors.grey,
+                color: Color.fromARGB(255, 7, 135, 240),
                 margin: EdgeInsets.fromLTRB(20, 5, 20, 10),
                       
                 child: Center(
