@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:my_app/patientDoctorDetailScreen.dart';
+import 'package:my_app/patientReportProblemScreen.dart';
 import 'package:my_app/patientFindDoctorScreen.dart';
 import 'package:my_app/patientFindStoreScreen.dart';
 import 'package:http/http.dart' as http;
@@ -37,15 +38,15 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
               child: Column(
                       children: [
               Container(
-                width: _mediaQuery.size.width * 0.8,
-                height: 40,
-                margin: const EdgeInsets.only(bottom: 10),
+                width: _mediaQuery.size.width * 0.6,
+                height: 50,
+                margin: const EdgeInsets.only(bottom: 20),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
-                              Radius.circular(20))) //<-- SEE HERE
+                              Radius.circular(20))) 
                       ),
                   child: Text(
                     'Find Doctor',
@@ -65,15 +66,15 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
                 ),
               ),
               Container(
-                width: _mediaQuery.size.width * 0.8,
-                height: 40,
+                width: _mediaQuery.size.width * 0.6,
+                height: 50,
                 margin: const EdgeInsets.only(bottom: 20),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 7, 135, 240),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
-                              Radius.circular(20))) //<-- SEE HERE
+                              Radius.circular(20)))
                       ),
                   child: Text(
                     'Find Store',
@@ -92,25 +93,64 @@ class _patientHomeScreenState extends State<patientHomeScreen> {
                   },
                 ),
               ),
-
-              GestureDetector(
-                onTap: () => getJokes(),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Container(
-                    color: Color.fromARGB(255, 7, 135, 240),
-                    width: 200,
-                    height: 50,
-                    child: Center(child: Text('Instant stress Buster Joke', style: TextStyle(color: Colors.white),))),
+              Container(
+                width: _mediaQuery.size.width * 0.6,
+                height: 50,
+                margin: const EdgeInsets.only(bottom: 30),
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(20)))
+                      ),
+                  child: Text(
+                    'Report a Problem',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: _mediaQuery.size.width * 0.06,
+                        color: Colors.white),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ReportProblemScreen(),
+                      ),
+                    );
+                  },
                 ),
               ),
-
+               Container(
+                width: _mediaQuery.size.width * 0.6,
+                height: 50,
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 7, 135, 240),
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(20)))
+                      ),
+                  child: Text(
+                    'Instant stress Buster Joke',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: _mediaQuery.size.width * 0.04,
+                        color: Colors.white),
+                  ),
+                  onPressed: () => getJokes(),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  color: Color.fromARGB(255, 140, 201, 252),
+                  //color: Color.fromARGB(255, 140, 201, 252),
                   height: 100,
-                  width: 700,
+                  width: _mediaQuery.size.width * 0.9,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color.fromARGB(255, 140, 201, 252)
+                  ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(msg),

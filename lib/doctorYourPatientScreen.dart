@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:my_app/Globalvar.dart';
+import 'package:my_app/patientHomeScreen.dart';
+import 'dart:async';
+import 'dart:convert';
 
 class DoctorYourPatient extends StatefulWidget {
   @override
@@ -6,94 +11,65 @@ class DoctorYourPatient extends StatefulWidget {
 }
 
 class _DoctorYourPatientState extends State<DoctorYourPatient> {
+
+  Future getAppointmentsApi () async{
+      Response response = await get(Uri.parse(liveUrl + 'api/doctorSchedule/upcomming?doctorId=' + id),
+      headers: {'x-access-token': token});
+      if (response.statusCode == 200) {
+        var data = jsonDecode(response.body.toString());
+        return data['data'].toList();
+      }else{
+        return [];
+      }
+    }
+
   @override
   Widget build(BuildContext context) {
-    List arrDoctor = [
-      {
-        'name': 'Tuesday',
-        'desc': '5 AM - 8 AM',
-       },
-      {
-         'name': 'Monday',
-        'desc': '11 PM - 1 AM',
-      },
-      {
-         'name': 'Wednesday',
-        'desc': '2 AM - 4PM',
-      },
-      {
-         'name': 'Saturday',
-        'desc': '3 PM - 4:30 PM',
-     },
-     
-  {
-         'name': 'Monday',
-        'desc': '11 PM - 1 AM',
-      },
-      {
-         'name': 'Wednesday',
-        'desc': '2 AM - 4PM',
-      },
-      {
-         'name': 'Saturday',
-        'desc': '3 PM - 4:30 PM',
-     },
-      {
-         'name': 'Saturday',
-        'desc': '3 PM - 4:30 PM',
-     },
-     
-  {
-         'name': 'Monday',
-        'desc': '11 PM - 1 AM',
-      },
-      {
-         'name': 'Wednesday',
-        'desc': '2 AM - 4PM',
-      },
-      {
-         'name': 'Saturday',
-        'desc': '3 PM - 4:30 PM',
-     },
-    ];
     var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
+         title: const Text("Hidden Therapy"),
         backgroundColor: Color.fromARGB(255, 7, 135, 240),
       ),
       body: Column(
         children: [
-          Container(
-            height: 100,
-              child: Center(
-                child: Text(
-                  "Your Upcoming Appointments",
-                  style: TextStyle(fontSize:  _mediaQuery.size.width * 0.04, fontWeight: FontWeight.bold),
+          const Padding(
+                  padding: EdgeInsets.only(bottom: 25, top: 25),
+                  child: Text(
+                    "Your Upcoming Appointments",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-            ),
         
-          Expanded(
-            child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 7,
-                    child: ListTile(
-                      onTap: () {
-                       
-                      },
-                      
-                      title: Text(
-                        arrDoctor[index]['name'],
-                        style: const TextStyle(fontSize: 20),
-                      ),
-                      subtitle: Text(arrDoctor[index]['desc']),
-                       trailing: const Text('24 Aug'),
-                  
-                    ),
-                  );
-                },
-                itemCount: arrDoctor.length),
+           Expanded(
+                child: FutureBuilder(
+                  future: getAppointmentsApi(),
+                  builder: (context, snapshot){
+                    if (!snapshot.hasData){
+                      return const SizedBox(
+                        width: 5,
+                        height: 5,
+                        child: CircularProgressIndicator()
+                        );
+                    }else{
+                      return ListView.builder(
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          return Card(
+                            child: ListTile(
+                              title: Text(snapshot.data![index]['day'].toString()),
+                              subtitle: Text(snapshot.data![index]['from'].toString()+' - '+snapshot.data![index]['from'].toString()),
+                              trailing: Text(snapshot.data![index]['price'].toString()+' USD'),
+                            )
+                          );
+                        }
+                      );
+                    }
+                  }
+                )
           ),
         ],
       ),
